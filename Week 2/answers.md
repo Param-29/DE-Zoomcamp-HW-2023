@@ -37,3 +37,5 @@ Q3: 14851920
 19:00:24.724 | INFO    | Task run 'write_bq-b366772c-0' - Finished in state Completed()
 19:00:24.964 | INFO    | Flow run 'phenomenal-wapiti' - Finished in state Completed('All states completed.')
 ```
+
+Q4: idk
