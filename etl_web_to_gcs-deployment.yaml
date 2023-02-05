@@ -3,7 +3,7 @@
 ###
 name: week2-de-deploy-github
 description: The main ETL function
-version: 0741229f552b7db6eda7a51c09098083
+version: e58ba0fbb7d9fa97c16fb77712f06914
 # The work queue that will handle this deployment's runs
 work_queue_name: test
 work_pool_name: null
@@ -26,8 +26,8 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
-  _block_document_id: b270c85c-49a3-4947-b732-ca5239937f6b
-  _block_document_name: anonymous-5126e2f7-8fab-44e6-bb4c-0538bb47f776
+  _block_document_id: 6ad039d2-408a-4897-aec4-0654d0d2d585
+  _block_document_name: anonymous-8efd99f2-6823-42e8-b91c-9b0319732461
   _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
@@ -40,4 +40,4 @@ parameter_openapi_schema:
   properties: {}
   required: null
   definitions: null
-timestamp: '2023-02-05T13:29:30.083513+00:00'
+timestamp: '2023-02-05T14:12:41.652968+00:00'

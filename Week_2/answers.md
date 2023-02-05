@@ -91,3 +91,25 @@ dtype: object
 19:11:51.267 | INFO    | Task run 'clean-2c6af9f6-0' - rows: 88605
 
 ```
+
+
+Q5: 514392
+
+```
+19:43:21.643 | INFO    | Task run 'clean-2c6af9f6-0' - rows: 514392
+19:43:21.795 | INFO    | Task run 'clean-2c6af9f6-0' - Finished in state Completed()
+19:43:23.733 | INFO    | Flow run 'sapphire-termite' - Created task run 'write_local-09e9d2b8-0' for task 'write_local'
+19:43:23.748 | INFO    | Flow run 'sapphire-termite' - Executing 'write_local-09e9d2b8-0' immediately...
+19:43:28.291 | INFO    | Task run 'write_local-09e9d2b8-0' - Finished in state Completed()
+19:43:28.541 | INFO    | Flow run 'sapphire-termite' - Created task run 'write_gcs-67f8f48e-0' for task 'write_gcs'
+19:43:28.547 | INFO    | Flow run 'sapphire-termite' - Executing 'write_gcs-67f8f48e-0' immediately...
+19:43:31.541 | INFO    | Task run 'write_gcs-67f8f48e-0' - Getting bucket 'prefect-dee'.
+19:43:32.172 | INFO    | Task run 'write_gcs-67f8f48e-0' - Uploading from PosixPath('data/green/green_tripdata_2019-04.parquet') to the bucket 'prefect-dee' path 'data/green/green_tripdata_2019-04.parquet'.
+19:43:34.647 | INFO    | Task run 'write_gcs-67f8f48e-0' - Finished in state Completed()
+19:43:35.009 | INFO    | Flow run 'sapphire-termite' - Finished in state Completed('All states completed.')
+19:43:37.101 | INFO    | prefect.infrastructure.process - Process 'sapphire-termite' exited cleanly.
+
+
+```
+
+Q6: 8
