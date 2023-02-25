@@ -12,7 +12,7 @@ CREATE TABLE `quick-ray-375906.ny_rides.external_data_hw_copy`
 AS 
   SELECT * FROM `quick-ray-375906.ny_rides.external_data_hw`;
 
-  SELECT COUNT(*) FROM `quick-ray-375906.ny_rides.external_data_hw`;
+SELECT COUNT(*) FROM `quick-ray-375906.ny_rides.external_data_hw`;
 
 ```
 ANS1: 43,244,696

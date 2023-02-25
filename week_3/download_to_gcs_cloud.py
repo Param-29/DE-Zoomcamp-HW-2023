@@ -10,7 +10,7 @@ def upload_to_bucket(blob_name, bucket_name, csv_name):
     # file.
     path_to_file = f'data/{csv_name}'
     storage_client = storage.Client.from_service_account_json(
-        'creds.json')
+        '/home/param/Downloads/GCloud-json/quick-ray-375906-15748deb6a49.json')
 
     #print(buckets = list(storage_client.list_buckets())
 
@@ -26,7 +26,7 @@ def download_data(month, year):
     url = f'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_{year}-{month:02}.csv.gz'
     csv_name = f'yellow_tripdata_{year}-{month:02}.csv.gz'
     print(f"Working on getting data from {url}....")
-    os.system(f"wget {url} -O data/{csv_name}")
+    os.system(f"axel {url} -o data/{csv_name}")
     print(f"Data stored in data/{csv_name}....")
 
     return csv_name
@@ -36,13 +36,14 @@ if __name__ == '__main__':
     
     
     
-    year = 2019
-    for month in range(4,13):
-        download_data(month, year)
-    
-        out = upload_to_bucket(
-            blob_name='data/gcs_bucket/yellow', 
-            bucket_name="your_bucket_name",
-            csv_name = f'fhv_tripdata_{year}-{month:02}.csv.gz'
-            )
-        print(out)
+    years = [2019]
+    for year in years:
+        for month in range(1,4):
+            download_data(month, year)
+        
+            out = upload_to_bucket(
+                blob_name='data/yellow', 
+                bucket_name="prefect-dee",
+                csv_name = f'yellow_tripdata_{year}-{month:02}.csv.gz'
+                )
+            print(out)
